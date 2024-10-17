@@ -1,0 +1,50 @@
+{
+  "availability": [
+    {
+      "topic": "zigbee2mqtt/bridge/state"
+    }
+  ],
+  "away_mode_command_topic": "zigbee2mqtt/radiator bureau/set/away_mode",
+  "away_mode_state_template": "{{ value_json.away_mode }}",
+  "away_mode_state_topic": "zigbee2mqtt/radiator bureau",
+  "current_temperature_template": "{{ value_json.local_temperature }}",
+  "current_temperature_topic": "zigbee2mqtt/radiator bureau",
+  "device": {
+    "identifiers": [
+      "zigbee2mqtt_0x50325ffffe60ec8e"
+    ],
+    "manufacturer": "TuYa",
+    "model": "Radiator valve with thermostat (TS0601_thermostat)",
+    "name": "radiator bureau",
+    "sw_version": "Zigbee2MQTT 1.22.0"
+  },
+  "hold_command_topic": "zigbee2mqtt/radiator bureau/set/preset",
+  "hold_modes": [
+    "schedule",
+    "manual",
+    "boost",
+    "complex",
+    "comfort",
+    "eco"
+  ],
+  "hold_state_template": "{{ value_json.preset }}",
+  "hold_state_topic": "zigbee2mqtt/radiator bureau",
+  "json_attributes_topic": "zigbee2mqtt/radiator bureau",
+  "max_temp": "35",
+  "min_temp": "5",
+  "mode_command_topic": "zigbee2mqtt/radiator bureau/set/system_mode",
+  "mode_state_template": "{{ value_json.system_mode }}",
+  "mode_state_topic": "zigbee2mqtt/radiator bureau",
+  "modes": [
+    "heat",
+    "auto",
+    "off"
+  ],
+  "name": "radiator bureau",
+  "temp_step": 0.5,
+  "temperature_command_topic": "zigbee2mqtt/radiator bureau/set/current_heating_setpoint",
+  "temperature_state_template": "{{ value_json.current_heating_setpoint }}",
+  "temperature_state_topic": "zigbee2mqtt/radiator bureau",
+  "temperature_unit": "C",
+  "unique_id": "0x50325ffffe60ec8e_climate_zigbee2mqtt"
+}
