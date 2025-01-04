@@ -203,7 +203,7 @@ func DiscoverAndStartCoverServices() {
 					skip = true
 				}
 			}
-			if dc.Device.Manufacturer == "Tuya" && dc.Device.Model == "Curtain/blind switch (TS130F)" && dc.Name == nil && !skip {
+			if dc.Device.Manufacturer == "Tuya" && dc.Device.Model == "Curtain/blind switch" && dc.Name == nil && !skip {
 				// Create a new CoverService for this cover
 				cs := NewCoverService(&dc, dc.Device.Name)
 				cs.Start()
