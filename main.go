@@ -32,7 +32,6 @@ func main() {
 
 	//init mqtt service
 	mqtt.Init(&cfg.Mqtt)
-
 	defer mqtt.Disconnect()
 
 	// Start the services
