@@ -1,5 +1,8 @@
 FROM alpine
 
+# Install glibc for CGO compatibility
+RUN apk add --no-cache libc6-compat
+
 RUN mkdir /app
 
 # Copy pre-built artifacts based on the platform

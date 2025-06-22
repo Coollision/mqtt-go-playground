@@ -19,6 +19,9 @@ RUN go build -v -tags "$buildtags" -ldflags="-X main.version=$version" -o /app/m
 
 FROM alpine
 
+# Install glibc for CGO compatibility
+RUN apk add --no-cache libc6-compat
+
 RUN addgroup -S umqtt-go-playground && adduser -S umqtt-go-playground -G umqtt-go-playground
 RUN mkdir /app && chown umqtt-go-playground:umqtt-go-playground /app
 
